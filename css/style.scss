@@ -1,0 +1,244 @@
+@import "mixins";
+
+
+html,
+body {
+  height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+footer {
+  margin: 50px 0;
+}
+h1 {
+  font-size: 68px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: absolute;
+  z-index: 80;
+  padding: 10%;
+}
+.SliderIcons {
+  position: absolute;
+  top: 60%;
+  left:5%;
+  right: 5%;
+  padding: 0 10%;
+};
+#menu {
+  background-color: white;
+}
+.manuIcon{
+  color: black;
+  font-size: 20px;
+  font-family: "Lato";
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: right;
+}
+#textBoxes{
+  background-color: white;
+}
+#photoes{
+  background-image: url('../images/background.jpg')
+}
+.section{
+  padding: 100px 0;
+}
+#mainNav{
+    font-size: 24px;
+    font-family: "Lato";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: right;
+}
+.homeButton{
+  background-color: #ead280;
+  height: 10rem;
+  border-bottom: 7px solid #b0b0b0;
+}
+.homeButton:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: solid #dfbb42 10px;
+}
+#white {
+  color: snow;
+}
+.navbar-custom .navbar-nav li:nth-child(3):hover {
+   color: #626262;
+   background-color: #e65d5d;
+   height: 10rem;
+   border-bottom: 7px solid #b0b0b0;
+ }
+.navbar-custom .navbar-nav li:nth-child(3):hover:before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: solid #c43434 10px;
+}
+.navbar-custom .navbar-nav li:nth-child(4):hover {
+  color: #626262;
+  background-color: #79b88b;
+  height: 10rem;
+  border-bottom: 7px solid #b0b0b0;
+}
+.navbar-custom .navbar-nav li:nth-child(4):hover:before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: solid #508b61 10px;
+}
+.navbar-custom .navbar-nav li:nth-child(5):hover {
+  color: #626262;
+  background-color: #80c0ce;
+  height: 10rem;
+  border-bottom: 7px solid #b0b0b0;
+}
+.navbar-custom .navbar-nav li:nth-child(5):hover:before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: solid #428d9e 10px;
+}
+.navbar-custom .navbar-nav li:nth-child(6):hover {
+  color: #626262;
+  background-color: #8393ca;
+  height: 10rem;
+  border-bottom: 7px solid #b0b0b0;
+}
+.navbar-custom .navbar-nav li:nth-child(6):hover:before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: solid #575fbd 10px;
+}
+
+#boxName1{
+  @include textBox(#428e9e);
+}
+
+#boxName2{
+  @include textBox(#c43434)
+}
+#boxName3{
+  @include textBox(#dfbb42)
+}
+#boxName4{
+   @include textBox(#508b61)
+ }
+#lorem{
+  background-color: white;
+  border: solid 1px #4e95a4;
+  font-family: "Lato";
+  font-size: 20px;
+ }
+#lorem h2{
+  color:  #4e95a4;
+}
+.photoBox{
+  background-color: white;
+  border-top: solid 10px blueviolet;
+}
+
+.gray-scale{
+  filter: grayscale(100%);
+}
+
+#tower {
+  border-bottom: 100px solid transparent white;
+  border-left: 100px solid transparent white;
+}
+#list{
+  background-color: white;
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  z-index: 14;
+  }
+
+}
+#list-title{
+  float: left;
+  position: absolute;
+  background-color: #7ec8ea;
+}
+ol.simple-list {
+  list-style-type: none;
+  list-style-type: decimal !ie; /*IE 7- hack*/
+
+  margin: 0;
+  margin-left: 3em;
+  padding: 0;
+
+  counter-reset: li-counter;
+}
+ol.simple-list > li{
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 0.5em;
+  min-height: 3em;
+  border-left: 2px solid #CCCCCC;
+}
+ol.simple-list > li:before {
+  position: absolute;
+  top: 0;
+  left: -1em;
+  width: 0.8em;
+
+  font-size: 3em;
+  line-height: 1;
+  font-weight: bold;
+  text-align: right;
+  color: #464646;
+
+  content: counter(li-counter);
+  counter-increment: li-counter;
+}
+#angle{
+  background-color: white;
+}

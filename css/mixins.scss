@@ -1,0 +1,9 @@
+@mixin textBox($color){
+  font-size: 40px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: $color;
+  min-height: 12rem;
+  padding-top: 3rem;
+}
